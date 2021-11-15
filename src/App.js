@@ -14,6 +14,7 @@ import Book from './pages/Book'
 import EditBook from './components/Books/EditBook'
 import AddBook from './components/Books/AddBook'
 import Pagination from './pages/Pagination'
+import Portfolio from './pages/Portfolio'
 
 function App() {
   return (
@@ -57,6 +58,9 @@ function App() {
 					</Route>
 					<Route path="/pagination">
 						<Pagination />
+					</Route>
+					<Route path="/portfolio">
+						<Portfolio />
 					</Route>
 				</Switch>
 			</div>

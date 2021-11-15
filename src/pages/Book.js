@@ -11,7 +11,7 @@ function Books() {
 			<div className="mt-8">
 				<div className={` grid ${books.length === 0 ? 'grid-cols-1' : 'lg:grid-cols-4 gap-4' } `}>
 					{ books.length > 0 ? ( books.map(item => 
-						<BookList { ...item } />
+						<BookList key={item.id} { ...item } />
 						)
 						):
 						(

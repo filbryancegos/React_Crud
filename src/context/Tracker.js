@@ -16,7 +16,6 @@ const TrackerProvider = ({children}) => {
 	const getSummary = async () => {
 		const response = await fetch(URL);
     	const users = await response.json();
-
 		setTracker({...tracker, 
 			status: convertNumber(users.Global),
 			countries: users.Countries,
@@ -26,7 +25,7 @@ const TrackerProvider = ({children}) => {
 
 	useEffect(() => {
 		getSummary()
-	})
+	}, [])
 
 	const getCountry = (e) => {
 		const {value} = e.target
@@ -44,6 +43,8 @@ const TrackerProvider = ({children}) => {
 			title: country.Country, 
 			dataDate: country.Date
 		})
+
+		
 	}
 
 	const numberWithCommas = (n) => {
@@ -62,8 +63,6 @@ const TrackerProvider = ({children}) => {
 		
 		return newCountry
 	}
-
-
 
 	return (
 		<TrackerContext.Provider

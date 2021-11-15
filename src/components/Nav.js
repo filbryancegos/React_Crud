@@ -24,6 +24,9 @@ function Nav() {
 						<div className="text-white text-base">
 							<NavLink to="/books" className="py-2">Book</NavLink>
 						</div>
+						<div className="text-white text-base">
+							<NavLink to="/portfolio" className="py-2">Portfolio</NavLink>
+						</div>
 					</div>
 				</div>
 			</div>
