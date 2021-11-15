@@ -26,7 +26,7 @@ const TrackerProvider = ({children}) => {
 
 	useEffect(() => {
 		getSummary()
-	}, [])
+	})
 
 	const getCountry = (e) => {
 		const {value} = e.target
@@ -53,9 +53,13 @@ const TrackerProvider = ({children}) => {
 
 	const convertNumber = (value) => {
 		const newCountry = {}
-		Object.keys(value).forEach(e => {
-			newCountry[e] = numberWithCommas(value[e])
-		})
+
+		if (value) {
+			Object.keys(value).forEach(e => {
+				newCountry[e] = numberWithCommas(value[e])
+			})
+		}
+		
 		return newCountry
 	}
 

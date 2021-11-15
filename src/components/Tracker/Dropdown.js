@@ -11,7 +11,7 @@ const Country = () => {
 				<span class="text-gray-700 ">Select Country</span>
 					<select onChange={getCountry}  class="block w-full mt-1">
 						<option value="0">Select Country</option>
-						{countries.map(country => 
+						{countries && countries.map(country => 
 							<option key={country.ID} value={country.ID}>{country.Country}</option>
 						)}
 					</select>
