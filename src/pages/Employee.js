@@ -10,7 +10,7 @@ const Employee = () => {
 	const { employees, handleSelectedAll, handleSelectedDelete } = useEmployeeContext()	
 	const isChecked = employees.filter(employee => employee.selected);
 	return (
-		<div className="container m-auto mt-8 h-min-screen">
+		<div className="container m-auto mt-8 h-min-screen px-6">
 			<div className="bg-gray-100  overflow-hidden">
 				<div className="bg-blue-900 p-4">
 					<div className="flex justify-between items-center">

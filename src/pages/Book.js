@@ -6,7 +6,7 @@ import { useBookContext } from '../context/Book'
 function Books() {
 	const { books } = useBookContext()
 	return (
-		<div className="container m-auto mt-8 h-min-screen">
+		<div className="container m-auto mt-8 h-min-screen px-6">
 			<BookHeader />
 			<div className="mt-8">
 				<div className={` grid ${books.length === 0 ? 'grid-cols-1' : 'lg:grid-cols-4 gap-4' } `}>

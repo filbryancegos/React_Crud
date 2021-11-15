@@ -9,7 +9,7 @@ const Tracker = () => {
 	const TITLE = 'Covid-19 Tracker'
 	
 	return (
-		<div className="text-center mt-8 container m-auto h-screen">
+		<div className="text-center mt-8 container m-auto h-min-screen px-6">
 			<Header url={URL} title={TITLE} />
 			<Title />
 			<Card />

@@ -10,7 +10,7 @@ const Banner = ({title}) => {
 					{title}
 				</h1>
 				<p className="pt-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime maiores et quisquam tempora voluptatem reprehenderit, quibusdam autem enim, eligendi delectus aliquid repellat libero aperiam, incidunt nesciunt ut praesentium eveniet cupiditate.</p>
-				<div className="mt-8 flex space-x-0 sm:space-x-2">
+				<div className="mt-8 flex space-x-0 sm:space-x-2 flex-col sm:flex-row space-y-4 sm:space-y-0">
 					<button className="bg-yellow-500 hover:bg-yellow-600 px-12 py-3 uppercase text-white">Learn More</button>
 					<button className="bg-purple-500 hover:bg-purple-600 px-12 py-3 uppercase text-white">Hire Me</button>
 				</div>

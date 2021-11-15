@@ -9,7 +9,7 @@ import { useGlobalContext } from '../context/Country'
 const Country = () => {
 	const { countrieslist, loading } = useGlobalContext()
 	return (
-		<div className="container m-auto mt-8 h-min-screen">
+		<div className="container m-auto mt-8 h-min-screen px-6 ">
 			<div className="grid grid-cols-1 sm:grid-cols-3 gap-16">
 				<Search />
 				<div></div>
