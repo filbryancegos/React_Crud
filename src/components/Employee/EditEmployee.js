@@ -1,18 +1,21 @@
-import React, { useEffect, useState} from 'react'
-import { useHistory } from "react-router-dom";
-import { useGlobalContext } from '../../context/context'
-import { Redirect } from "react-router-dom";
+import React, { useState} from 'react'
+import { useHistory, useParams } from "react-router-dom";
+import { useEmployeeContext } from '../../context/Employee'
+
 
 
 const EditEmployee = () => {
-	const { currentId, employees, updateEmployee } = useGlobalContext()
-	const itemEmployee = employees.find(employee => employee.id === currentId)
-
+	const { id } = useParams()
+	let history = useHistory()
+	const { employees, updateEmployee } = useEmployeeContext()
+	
+	const itemEmployee = employees.find(employee => employee.id === id)
+	
 	const [employee, setEmployee] = useState(itemEmployee)
 	const [errorMsg, setErrorMsg] = useState('')
 	const { fullname, email, address, phone } = employee
 
-	let history = useHistory();
+	
 
 	const handleChange = (e) => {
 		let value = e.target.value
@@ -50,7 +53,7 @@ const EditEmployee = () => {
 	}
 
 	return (
-		<div>
+		<div className="w-1/2 m-auto mt-8 h-min-screen">
 			{errorMsg && <p className="text-red-500 text-base">{errorMsg}</p>}
 			<form onSubmit={handleSubmit}>
 				<label className="block mb-6">

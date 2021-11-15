@@ -1,0 +1,7 @@
+export const REMOVE = 'REMOVE'
+export const UPDATE = 'UPDATE'
+export const CURRENT_ID = 'CURRENT_ID'
+export const ADD = 'ADD'
+export const TOOGLE = 'TOOGLE'
+export const TOOGLEALL = 'TOOGLEALL'
+export const DELETE_SELECTED = 'DELETE_SELECTED'

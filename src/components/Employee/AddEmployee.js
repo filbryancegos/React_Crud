@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { nanoid } from 'nanoid'
 import { useHistory } from "react-router-dom";
-import { useGlobalContext } from '../../context/context'
+import { useEmployeeContext } from '../../context/Employee'
 
 const AddEmployee = () => {
 	let history = useHistory();
-	const { addEmployee } = useGlobalContext()
+	const { addEmployee } = useEmployeeContext()
 	const initialState = {
 		id: nanoid(),
 		fullname: '',
@@ -36,6 +36,7 @@ const AddEmployee = () => {
 		} else {
 			errorMsg = 'Please fill out all the fields.';
 		}
+		setErrorMsg(errorMsg);
 		
 	}
 	const handleChange = (e) => {
@@ -54,7 +55,7 @@ const AddEmployee = () => {
 	}
 
 	return (
-		<div>
+		<div className="w-1/2 m-auto mt-8 h-min-screen">
 			{errorMsg && <p className="text-red-500 text-base">{errorMsg}</p>}
 			<form onSubmit={handleSubmit}>
 				<label className="block mb-6">

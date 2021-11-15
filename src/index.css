@@ -15,3 +15,11 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.loader-wrap {
+	height: 80vh;
+}
+.h-min-screen {
+	min-height: 100vh;
+}

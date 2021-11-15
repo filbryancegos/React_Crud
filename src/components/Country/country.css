@@ -1,0 +1,17 @@
+.search-box {
+	position: relative;
+	box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 10%), 0 0.2rem 0.1rem rgb(0 0 0 / 5%);
+	height: 3.5rem;
+	width: 100%;
+}
+
+.search-box input {
+	background: transparent;
+	width: 100%;
+    height: 100%;
+	padding-left: 60px;
+}
+
+.custom-dropdown {
+	height: 54px;
+}

@@ -1,14 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { AppProvider } from './context/context';
+import { AppProvider } from './context/Country';
+import { EmployeeProvider } from './context/Employee';
+import { TrackerProvider } from './context/Tracker';
+import { BookProvider } from './context/Book';
 
 ReactDOM.render(
   <React.StrictMode>
 	<AppProvider>
-    	<App />
+		<EmployeeProvider>
+			<TrackerProvider>
+				<BookProvider>
+					<App />
+				</BookProvider>
+			</TrackerProvider>
+		</EmployeeProvider>
 	</AppProvider>
   </React.StrictMode>,
   document.getElementById('root')

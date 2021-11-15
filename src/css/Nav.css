@@ -1,0 +1,7 @@
+a.active {
+	border-bottom: 2px solid #fff;
+}
+
+.nav-menu a:hover {
+	border-bottom: 2px solid #fff;
+}
