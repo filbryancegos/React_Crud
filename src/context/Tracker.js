@@ -25,7 +25,7 @@ const TrackerProvider = ({children}) => {
 
 	useEffect(() => {
 		getSummary()
-	}, [])
+	})
 
 	const getCountry = (e) => {
 		const {value} = e.target
